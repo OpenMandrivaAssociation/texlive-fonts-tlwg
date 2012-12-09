@@ -405,3 +405,11 @@ package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Feb 23 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5.0-1
++ Revision: 779723
+- Import texlive-fonts-tlwg
+- Import texlive-fonts-tlwg
+
