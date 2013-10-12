@@ -1,11 +1,11 @@
-# revision 25417
+# revision 30477
 # category Package
 # catalog-ctan /fonts/thai/fonts-tlwg
-# catalog-date 2012-02-16 15:35:28 +0100
+# catalog-date 2013-02-15 09:53:31 +0100
 # catalog-license gpl
-# catalog-version 0.5.0
+# catalog-version 0.5.1
 Name:		texlive-fonts-tlwg
-Version:	0.5.0
+Version:	0.5.1
 Release:	1
 Summary:	Thai fonts for LaTeX from TLWG
 Group:		Publishing
@@ -18,6 +18,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
+Requires(post):	texlive-tetex
 
 %description
 A collection of free Thai fonts, supplied as FontForge sources,
@@ -269,6 +270,7 @@ package.
 %{_texmfdistdir}/tex/latex/fonts-tlwg/lthttypist.fd
 %{_texmfdistdir}/tex/latex/fonts-tlwg/lthumpush.fd
 %{_texmfdistdir}/tex/latex/fonts-tlwg/lthwaree.fd
+%_texmf_updmap_d/fonts-tlwg
 %doc %{_texmfdistdir}/doc/fonts/fonts-tlwg/examples/teststd.tex
 #- source
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/AUTHORS
@@ -284,7 +286,7 @@ package.
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/TODO
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/aclocal.m4
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/configure
-%doc %{_texmfdistdir}/source/fonts/fonts-tlwg/configure.in
+%doc %{_texmfdistdir}/source/fonts/fonts-tlwg/configure.ac
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/fontconfig/64-ttf-thai-tlwg.conf
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/fontconfig/89-ttf-thai-tlwg-synthetic.conf
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/fontconfig/Makefile.am
@@ -405,11 +407,9 @@ package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Feb 23 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5.0-1
-+ Revision: 779723
-- Import texlive-fonts-tlwg
-- Import texlive-fonts-tlwg
-
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/fonts-tlwg <<EOF
+Map nectec.map
+Map nf.map
+Map tlwg.map
+EOF
