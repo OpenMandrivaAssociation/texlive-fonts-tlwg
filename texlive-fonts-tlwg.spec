@@ -6,7 +6,7 @@
 # catalog-version 0.5.1
 Name:		texlive-fonts-tlwg
 Version:	0.5.1
-Release:	4
+Release:	5
 Summary:	Thai fonts for LaTeX from TLWG
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/thai/fonts-tlwg
