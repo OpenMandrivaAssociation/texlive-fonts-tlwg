@@ -1,12 +1,12 @@
-# revision 30477
+# revision 33209
 # category Package
 # catalog-ctan /fonts/thai/fonts-tlwg
-# catalog-date 2013-02-15 09:53:31 +0100
+# catalog-date 2014-03-28 17:26:17 +0100
 # catalog-license gpl
-# catalog-version 0.5.1
+# catalog-version 0.6.0
 Name:		texlive-fonts-tlwg
-Version:	0.5.1
-Release:	6
+Version:	0.6.0
+Release:	1
 Summary:	Thai fonts for LaTeX from TLWG
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/thai/fonts-tlwg
@@ -74,6 +74,8 @@ package.
 %{_texmfdistdir}/fonts/afm/public/fonts-tlwg/umpush.afm
 %{_texmfdistdir}/fonts/afm/public/fonts-tlwg/umpush_b.afm
 %{_texmfdistdir}/fonts/afm/public/fonts-tlwg/umpush_bo.afm
+%{_texmfdistdir}/fonts/afm/public/fonts-tlwg/umpush_l.afm
+%{_texmfdistdir}/fonts/afm/public/fonts-tlwg/umpush_lo.afm
 %{_texmfdistdir}/fonts/afm/public/fonts-tlwg/umpush_o.afm
 %{_texmfdistdir}/fonts/afm/public/fonts-tlwg/waree.afm
 %{_texmfdistdir}/fonts/afm/public/fonts-tlwg/waree_b.afm
@@ -146,6 +148,8 @@ package.
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/rumpush.tfm
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/rumpush_b.tfm
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/rumpush_bo.tfm
+%{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/rumpush_l.tfm
+%{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/rumpush_lo.tfm
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/rumpush_o.tfm
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/rwaree.tfm
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/rwaree_b.tfm
@@ -166,6 +170,8 @@ package.
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/umpush.tfm
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/umpush_b.tfm
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/umpush_bo.tfm
+%{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/umpush_l.tfm
+%{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/umpush_lo.tfm
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/umpush_o.tfm
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/waree.tfm
 %{_texmfdistdir}/fonts/tfm/public/fonts-tlwg/waree_b.tfm
@@ -210,6 +216,8 @@ package.
 %{_texmfdistdir}/fonts/type1/public/fonts-tlwg/umpush.pfb
 %{_texmfdistdir}/fonts/type1/public/fonts-tlwg/umpush_b.pfb
 %{_texmfdistdir}/fonts/type1/public/fonts-tlwg/umpush_bo.pfb
+%{_texmfdistdir}/fonts/type1/public/fonts-tlwg/umpush_l.pfb
+%{_texmfdistdir}/fonts/type1/public/fonts-tlwg/umpush_lo.pfb
 %{_texmfdistdir}/fonts/type1/public/fonts-tlwg/umpush_o.pfb
 %{_texmfdistdir}/fonts/type1/public/fonts-tlwg/waree.pfb
 %{_texmfdistdir}/fonts/type1/public/fonts-tlwg/waree_b.pfb
@@ -254,6 +262,8 @@ package.
 %{_texmfdistdir}/fonts/vf/public/fonts-tlwg/umpush.vf
 %{_texmfdistdir}/fonts/vf/public/fonts-tlwg/umpush_b.vf
 %{_texmfdistdir}/fonts/vf/public/fonts-tlwg/umpush_bo.vf
+%{_texmfdistdir}/fonts/vf/public/fonts-tlwg/umpush_l.vf
+%{_texmfdistdir}/fonts/vf/public/fonts-tlwg/umpush_lo.vf
 %{_texmfdistdir}/fonts/vf/public/fonts-tlwg/umpush_o.vf
 %{_texmfdistdir}/fonts/vf/public/fonts-tlwg/waree.vf
 %{_texmfdistdir}/fonts/vf/public/fonts-tlwg/waree_b.vf
@@ -351,6 +361,7 @@ package.
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/scripts/gen-ttf.pe
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/scripts/gen.mk.am
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/scripts/thaikernpairs.txt
+%doc %{_texmfdistdir}/source/fonts/fonts-tlwg/test-driver
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/tests/Makefile.am
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/tests/Makefile.in
 %doc %{_texmfdistdir}/source/fonts/fonts-tlwg/tests/gen-pdfsample.sh
