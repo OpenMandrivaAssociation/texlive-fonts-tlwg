@@ -1,5 +1,5 @@
 Name:		texlive-fonts-tlwg
-Version:	0.6.4
+Version:	0.6.5
 Release:	1
 Summary:	Thai fonts for LaTeX from TLWG
 Group:		Publishing
