@@ -3,7 +3,7 @@ Version:	60817
 Release:	2
 Summary:	Thai fonts for LaTeX from TLWG
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/thai/fonts-tlwg
+URL:		https://www.ctan.org/tex-archive/fonts/thai/fonts-tlwg
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fonts-tlwg.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fonts-tlwg.doc.r%{version}.tar.xz
