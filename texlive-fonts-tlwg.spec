@@ -1,9 +1,10 @@
 %global tl_name fonts-tlwg
 %global tl_revision 79529
+%global tl_version 0.7.4
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	0.7.4
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	Thai fonts for LaTeX from TLWG
 Group:		Publishing
@@ -14,9 +15,20 @@ Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fonts-tlwg.doc.r
 Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fonts-tlwg.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 A collection of free Thai fonts, supplied as FontForge sources, and with
 LaTeX .fd files.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from fonts-tlwg:
+Map nectec.map
+Map nf.map
+Map sipa.map
+Map tlwg.map
+TL_DROPIN_EOF
